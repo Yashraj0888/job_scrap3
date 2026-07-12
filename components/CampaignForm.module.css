@@ -1,0 +1,150 @@
+.wrapper { display: flex; flex-direction: column; gap: 16px; animation: fadeUp 0.3s var(--ease); }
+
+/* Block */
+.block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color var(--t) var(--ease);
+}
+.block:hover { border-color: var(--border-bright); }
+
+.blockHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--primary);
+}
+
+.optTag {
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-3);
+  text-transform: lowercase;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+
+/* Grid */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 580px) { .grid2 { grid-template-columns: 1fr; } }
+
+/* Field */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 0.78rem; font-weight: 600; color: var(--text-2); letter-spacing: 0.01em; }
+.labelRow { display: flex; align-items: center; justify-content: space-between; }
+.hint { font-size: 0.72rem; color: var(--text-3); }
+.hint code {
+  background: var(--primary-subtle);
+  border: 1px solid rgba(99,102,241,0.2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 0.72rem;
+}
+
+.err { border-color: rgba(248,113,113,0.5) !important; box-shadow: 0 0 0 3px rgba(248,113,113,0.1) !important; }
+.errMsg { font-size: 0.76rem; color: var(--error); }
+
+.link { font-size: 0.74rem; color: var(--primary); text-decoration: none; transition: opacity var(--t) var(--ease); }
+.link:hover { opacity: 0.75; text-decoration: underline; }
+
+/* Password */
+.pwdWrap { position: relative; }
+.eyeBtn {
+  position: absolute; right: 11px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  color: var(--text-3); display: flex; align-items: center;
+  transition: color var(--t) var(--ease);
+}
+.eyeBtn:hover { color: var(--text-2); }
+
+/* Textarea */
+.textarea { resize: vertical; min-height: 160px; font-family: var(--font-sans); line-height: 1.6; }
+
+/* Attachments */
+.attachRow { display: flex; align-items: center; gap: 12px; }
+.attachCount { font-size: 0.8rem; color: var(--text-2); }
+
+.attachList { display: flex; flex-direction: column; gap: 7px; }
+.attachItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  color: var(--text-2);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.removeAttach {
+  background: none; border: none; cursor: pointer;
+  color: var(--text-3); display: flex; align-items: center;
+  border-radius: 4px; padding: 2px;
+  transition: all var(--t) var(--ease); margin-left: 4px;
+}
+.removeAttach:hover { color: var(--error); background: var(--error-bg); }
+
+/* Actions */
+.actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 4px; }
+
+.configList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.configLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.configCheckbox {
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--primary);
+  flex-shrink: 0;
+}
+
+.configTitle {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.configDesc {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+

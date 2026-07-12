@@ -1,0 +1,193 @@
+.container {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: scaleIn 0.32s var(--ease) both;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.logoMark {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary), #34d399);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px var(--primary-glow);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+
+.error {
+  padding: 10px 12px;
+  background: var(--error-bg);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--error);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  animation: fadeUp 0.2s var(--ease);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+}
+
+/* Account Chooser */
+.accountChooser {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeUp 0.25s var(--ease);
+}
+
+.chooserTitle {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+}
+
+.chooserSub {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-2);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.accountList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all var(--t) var(--ease);
+}
+.accountRow:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-bright);
+}
+
+.chooserAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.chooserInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.chooserName {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chooserEmail {
+  font-size: 0.74rem;
+  color: var(--text-3);
+}
+
+.customForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* Google button */
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+  user-select: none;
+}
+.googleBtn:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-bright);
+  box-shadow: 0 4px 20px var(--primary-glow);
+}
+.googleBtn svg {
+  flex-shrink: 0;
+}
