@@ -2,7 +2,8 @@
 
 > Find real job listings, extract recruiter contacts, and launch automated email campaigns — all from one dashboard.
 
-![App Screenshot](https://via.placeholder.com/800x450/1a1a2e/ffffff?text=JobScrape+Dashboard+%7C+Add+Screenshot+Here)
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/bf2f420e-d9f1-4e72-b30a-0c1f25f7d42c" />
+
 
 ---
 
@@ -27,11 +28,14 @@
 | **Email Campaigns** | Bulk send with tracking. Auto-pauses at a configurable limit per company. Retry failed sends. |
 | **Contacts Preview** | See all generated contacts, swap alternative email suggestions, review before launching. |
 
-![Job Search Results](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Job+Search+Table+%7C+Add+Screenshot+Here)
+![Job Search Results]<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/46b3b385-c279-4162-9bdc-2294f6ddbe94" />
 
-![Job Description Modal](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Job+Description+Modal+%7C+Add+Screenshot+Here)
 
-![Contacts Preview](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Contacts+Preview+%7C+Add+Screenshot+Here)
+![Job Description Modal]<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3ed07e56-91ba-4563-a664-6e258c60c4da" />
+
+
+![Contacts Preview]<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/e42d6c8b-d96a-4c8d-9e23-e2a2b8e77b75" />
+
 
 ---
 
@@ -150,7 +154,7 @@ outreach.db           — SQLite database (created at runtime)
    - **Additional Info** (education, benefits, remote policy)
 8. The response is displayed in a modal with the source badge ("Page scraped" vs "API description" vs "Blocked by Cloudflare")
 
-![Scraper Flow Diagram](https://via.placeholder.com/800x300/1a1a2e/ffffff?text=Scraper+Flow+Diagram+%7C+Add+Screenshot+Here)
+
 
 ---
 
