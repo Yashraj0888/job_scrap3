@@ -19,6 +19,7 @@
 
 /* ─── Dark Theme ─────────────────────────────────────────── */
 html.dark {
+  color-scheme: dark;
   --bg: #030303;
   --bg-alt: #08080c;
   --card-bg: rgba(8, 8, 12, 0.9);
@@ -68,6 +69,7 @@ html.dark {
 
 /* ─── Light Theme ─────────────────────────────────────────── */
 html.light {
+  color-scheme: light;
   --bg: #f9fafb;
   --bg-alt: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.95);

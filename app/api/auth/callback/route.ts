@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 // Handle Google OAuth callback (GET)
 export async function GET(req: NextRequest) {
   const code = req.nextUrl.searchParams.get('code');
-  const appURL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  const appURL = process.env.NEXT_PUBLIC_APP_URL || req.nextUrl.origin;
   const clientID = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
   const redirectURI = `${appURL}/api/auth/callback`;

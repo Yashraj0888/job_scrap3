@@ -1,0 +1,101 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease);
+}
+.button:hover:not(:disabled) {
+  border-color: var(--input-focus-border);
+  background: var(--surface-hover);
+}
+.button:focus-visible {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-shadow);
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.button.open {
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-shadow);
+}
+
+.label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: var(--text-3);
+}
+
+.chevron {
+  flex-shrink: 0;
+  margin-left: 8px;
+  color: var(--text-3);
+  transition: transform var(--t) var(--ease);
+}
+.open .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 4px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--card-shadow);
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+  animation: fadeIn 0.15s var(--ease);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.option {
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius-xs);
+  transition: background var(--t) var(--ease);
+}
+.option:hover,
+.option.highlighted {
+  background: var(--surface-hover);
+}
+.option.selected {
+  font-weight: 600;
+  color: var(--primary);
+}

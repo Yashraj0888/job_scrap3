@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import JobDetailModal from './JobDetailModal';
+import CustomSelect from './CustomSelect';
 import styles from './JobSearch.module.css';
 
 const LS_KEY = 'mb-jobs-search';
@@ -335,52 +336,72 @@ export default function JobSearch({ onUpload, geminiApiKey }: Props) {
         <div className={styles.filterGrid}>
           <div className={styles.field}>
             <label className={styles.smallLabel}>Experience</label>
-            <select className={`field-input ${styles.input}`} value={experience} onChange={(e) => setExperience(e.target.value)}>
-              <option value="">Any</option>
-              <option value="junior">Entry Level / Junior</option>
-              <option value="mid">Mid Level</option>
-              <option value="senior">Senior</option>
-            </select>
+            <CustomSelect
+              value={experience}
+              onChange={(value) => setExperience(value)}
+              options={[
+                { value: '', label: 'Any' },
+                { value: 'junior', label: 'Entry Level / Junior' },
+                { value: 'mid', label: 'Mid Level' },
+                { value: 'senior', label: 'Senior' },
+              ]}
+            />
           </div>
           <div className={styles.field}>
             <label className={styles.smallLabel}>Contract Type</label>
-            <select className={`field-input ${styles.input}`} value={contractType} onChange={(e) => setContractType(e.target.value)}>
-              <option value="">All Types</option>
-              <option value="permanent">Permanent</option>
-              <option value="contract">Contract</option>
-            </select>
+            <CustomSelect
+              value={contractType}
+              onChange={(value) => setContractType(value)}
+              options={[
+                { value: '', label: 'All Types' },
+                { value: 'permanent', label: 'Permanent' },
+                { value: 'contract', label: 'Contract' },
+              ]}
+            />
           </div>
           <div className={styles.field}>
             <label className={styles.smallLabel}>Job Time</label>
-            <select className={`field-input ${styles.input}`} value={contractTime} onChange={(e) => setContractTime(e.target.value)}>
-              <option value="">All Times</option>
-              <option value="full_time">Full-Time</option>
-              <option value="part_time">Part-Time</option>
-            </select>
+            <CustomSelect
+              value={contractTime}
+              onChange={(value) => setContractTime(value)}
+              options={[
+                { value: '', label: 'All Times' },
+                { value: 'full_time', label: 'Full-Time' },
+                { value: 'part_time', label: 'Part-Time' },
+              ]}
+            />
           </div>
           <div className={styles.field}>
             <label className={styles.smallLabel}>Posted Within</label>
-            <select className={`field-input ${styles.input}`} value={maxDaysOld} onChange={(e) => setMaxDaysOld(e.target.value)}>
-              <option value="">Any Time</option>
-              <option value="1">24 Hours</option>
-              <option value="3">3 Days</option>
-              <option value="7">7 Days</option>
-              <option value="14">14 Days</option>
-              <option value="30">30 Days</option>
-            </select>
+            <CustomSelect
+              value={maxDaysOld}
+              onChange={(value) => setMaxDaysOld(value)}
+              options={[
+                { value: '', label: 'Any Time' },
+                { value: '1', label: '24 Hours' },
+                { value: '3', label: '3 Days' },
+                { value: '7', label: '7 Days' },
+                { value: '14', label: '14 Days' },
+                { value: '30', label: '30 Days' },
+              ]}
+            />
           </div>
           <div className={styles.field}>
             <label className={styles.smallLabel}>Country</label>
-            <select className={`field-input ${styles.input}`} value={country} onChange={(e) => setCountry(e.target.value)}>
-              <option value="in">🇮🇳 India</option>
-              <option value="us">🇺🇸 US</option>
-              <option value="gb">🇬🇧 UK</option>
-              <option value="ca">🇨🇦 Canada</option>
-              <option value="au">🇦🇺 Australia</option>
-              <option value="de">🇩🇪 Germany</option>
-              <option value="sg">🇸🇬 Singapore</option>
-              <option value="ae">🇦🇪 UAE</option>
-            </select>
+            <CustomSelect
+              value={country}
+              onChange={(value) => setCountry(value)}
+              options={[
+                { value: 'in', label: '🇮🇳 India' },
+                { value: 'us', label: '🇺🇸 US' },
+                { value: 'gb', label: '🇬🇧 UK' },
+                { value: 'ca', label: '🇨🇦 Canada' },
+                { value: 'au', label: '🇦🇺 Australia' },
+                { value: 'de', label: '🇩🇪 Germany' },
+                { value: 'sg', label: '🇸🇬 Singapore' },
+                { value: 'ae', label: '🇦🇪 UAE' },
+              ]}
+            />
           </div>
           <div className={styles.filterActions}>
             <button
