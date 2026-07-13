@@ -75,8 +75,9 @@ export async function GET(req: NextRequest) {
 
     return response;
   } catch (err) {
-    console.error('Google OAuth callback error:', err);
-    return NextResponse.redirect(`${appURL}/login?error=auth_failed`);
+    const msg = err instanceof Error ? err.message : 'Unknown error';
+    console.error('Google OAuth callback error:', msg);
+    return NextResponse.redirect(`${appURL}/login?error=auth_failed&detail=${encodeURIComponent(msg.slice(0, 100))}`);
   }
 }
 
